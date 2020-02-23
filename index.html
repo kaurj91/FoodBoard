@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>FoodBoard - Login</title>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'/>
+        <link href='https://fonts.googleapis.com/css?family=Glass Antiqua' rel='stylesheet'/>
+
+        <style>
+
+            body
+            {
+                background-image: url('images/background.jpg');
+                background-position: center;
+                background-size: cover;
+            }
+
+            #myModal 
+            {
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+            }
+
+          
+            .modal-content 
+            {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 10px;
+                border: 1px solid #888;
+                width: 55%;
+                border-radius: 25px;
+                height: 65%;
+            }
+                
+            
+            input[type="text"],
+            input[type="password"]
+            {
+                width: 85%;
+                height: 7%;
+            }
+            
+            input[type='button']
+            {
+                width: 140px;
+                height: 45px;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                font-weight: 500;
+                color: #000;
+                background-color: #fff;
+                border: none;
+                border-radius: 35px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+            }
+            
+            input[type='button']:hover
+            {
+                background-color: #CDDC39;
+                box-shadow: 0px 15px 20px #CDDC39;
+                color: #fff;
+                transform: translateY(-5px);
+            }
+            
+            #signUpButton
+            {
+                margin-top: -10%;
+            }
+
+            #signUpButton:hover
+            {
+                background-color: #CDDC39;
+                box-shadow: 0px 15px 20px #CDDC39;
+                color: #fff;
+                transform: translateY(-5px);
+            }
+            
+            .welcome-back
+            {
+                margin:auto 5%;
+                width:33%;
+                padding-left:15px;
+                overflow: hidden;
+                float: left;
+            }
+            
+            .vl 
+            {
+                border-left: 6px solid #CDDC39;
+                height: 100%;
+                float: left;
+                margin-left: 5%;
+            }
+            
+            .new-user
+            {
+                float:left;
+                margin-left:8%;
+                width:33%;
+                overflow: hidden;
+            }
+            
+            .title 
+            {
+                font-family: 'Calligraffitti';
+                font-size: 60px;
+            }
+            
+            h3,
+            h4
+            {
+                font-family: 'Glass Antiqua';
+                font-size: 32px;
+            }
+            
+            .wrap 
+            {
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        
+                
+            img
+            {
+                width: 100%;
+                height: auto;
+                margin: 20% auto;
+                float: left;
+            }
+            
+            input:invalid
+            {
+                border: 2px solid red;
+            }
+            
+            .validation
+            {
+                display: none;
+            }
+            
+            .validate
+            {
+                display: none;
+            }
+
+        </style>
+
+
+    </head>
+
+
+    
+    <body>
+
+        <div id="myModal">
+            <div class="modal-content">
+            
+                <div class="welcome-back">
+                    <h1 class="title"> FoodBoard</h1>
+                    <h3> Welcome Back!</h3>
+                    Username <input type="text" id="loginName" name="loginName" /> <br /> <br />
+                    Password <input type="password" id="password" name="password" /> <br /> <br />
+                    <div class="validate"></div>
+                    <div class="wrap">
+                    <input type="button" name="btnLogin" value="Login" onclick="login()"/>
+                    </div>
+                </div>
+                
+                <div class="vl"></div>
+            
+                    
+                <div class="new-user">
+                    <h4>New User? <br /> SignUp to shop at a price you'll love!</h4>
+                    Email<br /> <input type="text" name="newUserEmail" id="newUserEmail" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z.-]+$" title="Please enter a valid email address."/> <br /> <br />
+                    Username <input type="text" name="newUserName" id="newUserName" pattern="[a-zA-Z0-9]{3,15}" title="Please enter a valid username. Must be 3 to 15 characters long."/> <br /> <br />
+                    Password <input type="password" name="newUserPass" id="newUserPass" pattern="[a-zA-Z0-9]{8,16}" title="Please enter a valid password. Must be 8 to 16 characters long."/> <br /> <br />
+                    <div class="validation"></div>
+                    <div class="wrap">
+                    <input type="button" name="btnSignUp" value="Sign Up" id="signUpButton" onclick="signUp()"/>
+                    </div>
+                </div>
+                
+                <div class="registration">
+                    <h4>Registration</h4>
+                    
+
+                </div>    
+            </div>
+
+        </div>
+
+
+    </body>>    
+</html>    
